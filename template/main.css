@@ -43,6 +43,30 @@ h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
+
+.all-task_top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.all-tasks-title {
+  margin: 0;
+  font-size: 1.5em; 
+  line-height: 1; 
+}
+
+.add-task-btn {
+  padding: 5px 10px; 
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em; 
+  line-height: 1.2;
+}
+
 .all-tasks,
 .matrix {
   max-height: 100%;
@@ -100,4 +124,18 @@ li {
   margin: 5px 0;
   padding: 10px;
   border-radius: 4px;
+}
+
+
+
+.list-item-top{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+
+.tasks-list-item{
+  border: 1px solid rgb(0, 0, 0);
+  background-color: #ffcccc;
 }

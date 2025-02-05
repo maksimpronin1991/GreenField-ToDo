@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="/template/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Smooch+Sans:wght@495&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Smooch+Sans:wght@495&display=swap"
+        rel="stylesheet">
     <title>template</title>
 </head>
 
@@ -15,76 +17,25 @@
     <h1>Eisenhower Matrix To-Do List</h1>
     <div class="container">
         <div class="all-tasks">
-            <h2>All Tasks</h2>
+            <div class="all-task_top-container">
+                <h2 class="all-tasks-title">All Tasks</h2>
+                <button class="add-task-btn">Add</button>
+            </div>
             <ul id="all-tasks-list">
                 <li class="tasks-list-item">
                     <div class="list-item-container">
-                        <h3 class="list-item-title">Task1</h3>
-                        <p class="list-item-description">Wash my feet</p>
-                        <div class="list-item-controllers">
-                            <label for="complete-checkbox">Done
-                                <input type="checkbox" class="complete-checkbox" id="complete-checkbox"
-                                    name="complete-checkbox">
-                            </label>
-                            <button class="edit-btn">Edit</button>
-                            <button class="delete-btn">Delete</button>
+                        <div class="list-item-top">
+                            <h3 class="list-item-title">Task1</h3>
+                            <div class="list-item-controllers">
+                                <label for="complete-checkbox">Done
+                                    <input type="checkbox" class="complete-checkbox" id="complete-checkbox"
+                                        name="complete-checkbox">
+                                </label>
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="tasks-list-item">
-                    <div class="list-item-container">
-                        <h3 class="list-item-title">Task1</h3>
                         <p class="list-item-description">Wash my feet</p>
-                        <div class="list-item-controllers">
-                            <label for="complete-checkbox">Done
-                                <input type="checkbox" class="complete-checkbox" id="complete-checkbox"
-                                    name="complete-checkbox">
-                            </label>
-                            <button class="edit-btn">Edit</button>
-                            <button class="delete-btn">Delete</button>
-                        </div>
-                    </div>
-                </li>
-                <li class="tasks-list-item">
-                    <div class="list-item-container">
-                        <h3 class="list-item-title">Task1</h3>
-                        <p class="list-item-description">Wash my feet</p>
-                        <div class="list-item-controllers">
-                            <label for="complete-checkbox">Done
-                                <input type="checkbox" class="complete-checkbox" id="complete-checkbox"
-                                    name="complete-checkbox">
-                            </label>
-                            <button class="edit-btn">Edit</button>
-                            <button class="delete-btn">Delete</button>
-                        </div>
-                    </div>
-                </li>
-                <li class="tasks-list-item">
-                    <div class="list-item-container">
-                        <h3 class="list-item-title">Task1</h3>
-                        <p class="list-item-description">Wash my feet</p>
-                        <div class="list-item-controllers">
-                            <label for="complete-checkbox">Done
-                                <input type="checkbox" class="complete-checkbox" id="complete-checkbox"
-                                    name="complete-checkbox">
-                            </label>
-                            <button class="edit-btn">Edit</button>
-                            <button class="delete-btn">Delete</button>
-                        </div>
-                    </div>
-                </li>
-                <li class="tasks-list-item">
-                    <div class="list-item-container">
-                        <h3 class="list-item-title">Task1</h3>
-                        <p class="list-item-description">Wash my feet</p>
-                        <div class="list-item-controllers">
-                            <label for="complete-checkbox">Done
-                                <input type="checkbox" class="complete-checkbox" id="complete-checkbox"
-                                    name="complete-checkbox">
-                            </label>
-                            <button class="edit-btn">Edit</button>
-                            <button class="delete-btn">Delete</button>
-                        </div>
                     </div>
                 </li>
             </ul>
@@ -94,32 +45,90 @@
             <div class="quadrant urgent-important">
                 <h2>Urgent & Important</h2>
                 <ul id="urgent-important-list">
-                    <li>Task 1: Finish project report</li>
+                    <li class="tasks-list-item">
+                        <div class="list-item-container">
+                            <div class="list-item-top">
+                                <h3 class="list-item-title">Task1</h3>
+                                <div class="list-item-controllers">
+                                    <label for="complete-checkbox">Done
+                                        <input type="checkbox" class="complete-checkbox" id="complete-checkbox"
+                                            name="complete-checkbox">
+                                    </label>
+                                    <button class="edit-btn">Edit</button>
+                                    <button class="delete-btn">Delete</button>
+                                </div>
+                            </div>
+                            <p class="list-item-description">Wash my feet</p>
+
+                        </div>
+                    </li>
                 </ul>
             </div>
 
             <div class="quadrant not-urgent-important">
                 <h2>Not Urgent & Important</h2>
                 <ul id="not-urgent-important-list">
-                    <li>Task 3: Plan vacation</li>
-                    <li>Task 3: Plan vacation</li>
-                    <li>Task 3: Plan vacation</li>
-                    <li>Task 3: Plan vacation</li>
-                    <li>Task 3: Plan vacation</li>
-                    <li>Task 3: Plan vacation</li>
+                    <li class="tasks-list-item">
+                        <div class="list-item-container">
+                            <div class="list-item-top">
+                                <h3 class="list-item-title">Task1</h3>
+                                <div class="list-item-controllers">
+                                    <label for="complete-checkbox">Done
+                                        <input type="checkbox" class="complete-checkbox" id="complete-checkbox"
+                                            name="complete-checkbox">
+                                    </label>
+                                    <button class="edit-btn">Edit</button>
+                                    <button class="delete-btn">Delete</button>
+                                </div>
+                            </div>
+                            <p class="list-item-description">Wash my feet</p>
+
+                        </div>
+                    </li>
                 </ul>
             </div>
 
             <div class="quadrant urgent-not-important">
                 <h2>Urgent & Not Important</h2>
                 <ul id="urgent-not-important-list">
-                    <li>Task 2: Call client</li>
+                    <li class="tasks-list-item">
+                        <div class="list-item-container">
+                            <div class="list-item-top">
+                                <h3 class="list-item-title">Task1</h3>
+                                <div class="list-item-controllers">
+                                    <label for="complete-checkbox">Done
+                                        <input type="checkbox" class="complete-checkbox" id="complete-checkbox"
+                                            name="complete-checkbox">
+                                    </label>
+                                    <button class="edit-btn">Edit</button>
+                                    <button class="delete-btn">Delete</button>
+                                </div>
+                                <p class="list-item-description">Wash my feet</p>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
 
             <div class="quadrant not-urgent-not-important">
                 <h2>Not Urgent & Not Important</h2>
                 <ul id="not-urgent-not-important-list">
+                    <li class="tasks-list-item">
+                        <div class="list-item-container">
+                            <div class="list-item-top">
+                                <h3 class="list-item-title">Task1</h3>
+                                <div class="list-item-controllers">
+                                    <label for="complete-checkbox">Done
+                                        <input type="checkbox" class="complete-checkbox" id="complete-checkbox"
+                                            name="complete-checkbox">
+                                    </label>
+                                    <button class="edit-btn">Edit</button>
+                                    <button class="delete-btn">Delete</button>
+                                </div>
+                            </div>
+                            <p class="list-item-description">Wash my feet</p>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
