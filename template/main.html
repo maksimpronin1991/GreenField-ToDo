@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/template/reset.css">
     <link rel="stylesheet" href="/template/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,9 +18,14 @@
     <h1>Eisenhower Matrix To-Do List</h1>
     <div class="container">
         <div class="all-tasks">
-            <div class="all-task_top-container">
-                <h2 class="all-tasks-title">All Tasks</h2>
+            <h2 class="all-tasks-title">All Tasks</h2>
+            <div class="all-tasks_controls">
                 <button class="add-task-btn">Add</button>
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="active">Active</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
             </div>
             <ul id="all-tasks-list">
                 <li class="tasks-list-item">
@@ -82,9 +88,9 @@
                                 </div>
                             </div>
                             <p class="list-item-description">Wash my feet</p>
-
                         </div>
                     </li>
+
                 </ul>
             </div>
 
@@ -103,8 +109,8 @@
                                     <button class="edit-btn">Edit</button>
                                     <button class="delete-btn">Delete</button>
                                 </div>
-                                <p class="list-item-description">Wash my feet</p>
                             </div>
+                            <p class="list-item-description">Wash my feet</p>
                         </div>
                     </li>
                 </ul>
