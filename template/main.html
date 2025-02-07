@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/template/reset.css">
     <link rel="stylesheet" href="/template/main.css">
+    <link rel="stylesheet" href="/template/modal.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -139,6 +140,34 @@
             </div>
         </div>
     </div>
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Add/Edit Task</h2>
+            <form id="taskForm">
+                <label for="taskTitle">Title:</label>
+                <input type="text" id="taskTitle" name="taskTitle" required>
+                
+                <label for="taskDescription">Description:</label>
+                <textarea id="taskDescription" name="taskDescription"></textarea>
+                
+                <label for="taskUrgency">Urgency:</label>
+                <select id="taskUrgency" name="taskUrgency">
+                    <option value="urgent">Urgent</option>
+                    <option value="not-urgent">Not Urgent</option>
+                </select>
+                
+                <label for="taskImportance">Importance:</label>
+                <select id="taskImportance" name="taskImportance">
+                    <option value="important">Important</option>
+                    <option value="not-important">Not Important</option>
+                </select>
+                
+                <button type="submit" id="saveTask">Save Task</button>
+            </form>
+        </div>
+    </div>
+    <script src="/template/modal.js"></script>
 </body>
 
 </html>
