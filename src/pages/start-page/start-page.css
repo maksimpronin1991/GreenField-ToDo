@@ -1,0 +1,35 @@
+.start-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #242424;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .start-page h1 {
+    font-size: 2.5rem;
+    color: #c9c9c9;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .start-btn {
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    background-color: #646cff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .start-btn:hover {
+    background-color: #535bf2;
+  }
+  
+  .start-btn:active {
+    transform: scale(0.98);
+  }

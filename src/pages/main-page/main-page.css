@@ -1,0 +1,17 @@
+.container {
+    flex: 1;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    padding: 5px;
+    overflow: hidden;
+  }
+
+  .main-title{
+    font-size: 28px;
+    margin: 0;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+  }
