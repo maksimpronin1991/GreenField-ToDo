@@ -1,4 +1,3 @@
-import "./all-tasks.css";
 
 export function AllTasks() {
     return (

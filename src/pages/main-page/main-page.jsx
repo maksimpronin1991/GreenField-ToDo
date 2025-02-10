@@ -1,6 +1,5 @@
 import { AllTasks } from "../../components/all-tasks/all-tasks"
 import { Matrix } from "../../components/matrix/matrix"
-import "./main-page.css"
 
 
 

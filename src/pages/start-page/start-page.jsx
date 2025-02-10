@@ -1,4 +1,3 @@
-import './start-page.css';
 
 export function StartPage() {
     return (

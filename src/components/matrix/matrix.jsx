@@ -1,4 +1,4 @@
-import "./matrix.css"
+
 export function Matrix(){
     return (<div className="matrix">
         <div className="quadrant urgent-important">
