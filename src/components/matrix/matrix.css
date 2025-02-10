@@ -1,0 +1,41 @@
+.matrix {
+    max-height: 100%;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .matrix {
+    max-height: 100%;
+    overflow-y: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .quadrant {
+    max-height: 100%;
+    overflow-y: auto;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .urgent-important {
+    background-color: #ffcccc;
+  }
+  
+  .not-urgent-important {
+    background-color: #ccffcc;
+  }
+  
+  .urgent-not-important {
+    background-color: #ccccff;
+  }
+  
+  .not-urgent-not-important {
+    background-color: #ffffcc;
+  }
