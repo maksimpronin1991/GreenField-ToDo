@@ -21,7 +21,6 @@ h1 {
   font-size: 28px;
   margin: 0;
   padding: 10px;
-  background-color: #333;
   color: white;
 }
 
@@ -31,6 +30,18 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 
+a{
+  color: #333;
+  text-decoration: none;
+}
+
+
+
+.main-title{
+  background-color: #333;
+  color: white;
+  font-size: 2em;
+}
 
 
 .container {
@@ -42,8 +53,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 5px;
   overflow: hidden;
 }
-
-/* ================================================================= */
 
 
 .all-task_top-container {
@@ -198,4 +207,42 @@ li {
 
 .start-btn:active {
   transform: scale(0.98);
+}
+
+.error-404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.error-404 h2 {
+  font-size: 6rem;
+  color: #c9c9c9;
+  margin-bottom: 1rem;
+}
+
+.error-404 p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  max-width: 80%;
+}
+
+.error-404 .start-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.error-404 .start-btn:hover {
+  background-color: #45a049;
 }
