@@ -1,3 +1,4 @@
+import { Task } from "../task/task";
 
 export function AllTasks() {
     return (
@@ -18,7 +19,7 @@ export function AllTasks() {
                 </div>
             </div>
             <ul id="all-tasks-list">
-                
+                <Task/>
             </ul>
         </div>
     )
