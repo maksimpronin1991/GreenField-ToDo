@@ -10,7 +10,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<StartPage />} />
-        <Route path='/main' element={<MainPage />} />
+        <Route path='/main/:filter' element={<MainPage />} />
         <Route path='*' element={<ErrorPage/>} />
       </Routes>
 
