@@ -4,7 +4,7 @@ export function StartPage() {
     return (
         <div className="start-page">
             <h1>Welocome to Eisenhower Matrix To-Do List</h1>
-            <Link to="/main" className="start-btn">Enter in your Matrix</Link>
+            <Link to="/main/all" className="start-btn">Enter in your Matrix</Link>
         </div>
     )
 }
