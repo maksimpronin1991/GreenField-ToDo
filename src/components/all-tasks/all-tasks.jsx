@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Task } from "../task/task";
 
 export function AllTasks() {
@@ -5,7 +6,7 @@ export function AllTasks() {
         <div className="all-tasks">
             <h2 className="all-tasks-title">All Tasks</h2>
             <div className="all-tasks_controls">
-                <button className="add-task-btn">Add</button>
+                <Link  to="/add"  className="add-task-btn">Add</Link>
                 <div className="filter-controls">
                     <button className="filter-btn active" data-filter="all">
                         All

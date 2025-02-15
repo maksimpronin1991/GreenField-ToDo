@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 
 export function AddTaskPage() {
     return (
         <div id="taskModal" className="modal">
             <div className="modal-content">
-                <span className="close">×</span>
+            <Link to="/main/all" className="close">×</Link>
                 <h2 id="modalTitle">Add/Edit Task</h2>
                 <form id="taskForm">
                     <label htmlFor="taskTitle">Title:</label>
@@ -20,9 +21,9 @@ export function AddTaskPage() {
                         <option value="important">Important</option>
                         <option value="not-important">Not Important</option>
                     </select>
-                    <button type="submit" id="saveTask">
+                    <Link to="/main/all" type="submit" id="saveTask">
                         Save Task
-                    </button>
+                    </Link>
                 </form>
             </div>
         </div>
