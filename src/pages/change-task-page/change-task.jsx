@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
-export function AddTaskPage() {
+export function ChangeTaskPage() {
     return (
         <div id="taskModal" className="modal">
             <div className="modal-content">
             <Link to="/main/all" className="close">×</Link>
-                <h2 id="modalTitle">Add Task</h2>
+                <h2 id="modalTitle">Edit Task</h2>
                 <form id="taskForm">
                     <label htmlFor="taskTitle">Title:</label>
                     <input type="text" id="taskTitle" name="taskTitle" required="" />
