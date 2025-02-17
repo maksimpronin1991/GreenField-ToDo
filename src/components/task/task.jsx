@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 export function Task() {
 
@@ -16,7 +17,7 @@ export function Task() {
                                 name="complete-checkbox"
                             />
                         </label>
-                        <button className="edit-btn">Edit</button>
+                        <Link className="edit-btn">Edit</Link>
                         <button className="delete-btn">Delete</button>
                     </div>
                 </div>
