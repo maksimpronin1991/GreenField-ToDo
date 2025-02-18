@@ -19,7 +19,12 @@ export function Matrix(){
           <h2>Urgent &amp; Not Important</h2>
           <ul id="urgent-not-important-list">
           <Task/>
-
+          <Task/>
+          <Task/>
+          <Task/>
+          <Task/>
+          <Task/>
+          <Task/>
           </ul>
         </div>
         <div className="quadrant not-urgent-not-important">

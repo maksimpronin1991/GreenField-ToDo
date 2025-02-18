@@ -37,19 +37,9 @@ h1, h2, h3, h4, h5, h6 {
   gap: 10px;
   padding: 5px;
   overflow: hidden;
+  max-height: 100%;
 }
 
-/* ================================================================= */
-
-
-.all-task_top-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-}
 
 .all-tasks-title {
   margin: 0;

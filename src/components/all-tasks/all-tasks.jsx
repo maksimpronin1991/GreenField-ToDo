@@ -21,6 +21,11 @@ export function AllTasks() {
             </div>
             <ul id="all-tasks-list">
                 <Task/>
+                <Task/>
+                <Task/>
+                <Task/>
+                <Task/>
+                <Task/>
             </ul>
         </div>
     )
