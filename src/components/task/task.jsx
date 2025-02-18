@@ -17,7 +17,7 @@ export function Task() {
                                 name="complete-checkbox"
                             />
                         </label>
-                        <Link className="edit-btn">Edit</Link>
+                        <Link to="/change/:taskId" className="edit-btn">Edit</Link>
                         <button className="delete-btn">Delete</button>
                     </div>
                 </div>
