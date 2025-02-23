@@ -5,6 +5,7 @@ export const taskMocks = [
       description: "Подготовить и отправить итоговый отчет по текущему проекту",
       urgency: "urgent",
       importance: "important",
+      completed: false
     },
     {
       id: 2,
@@ -12,6 +13,7 @@ export const taskMocks = [
       description: "Составить список и купить продукты на неделю",
       urgency: "not-urgent",
       importance: "important",
+      completed: false
     },
     {
       id: 3,
@@ -19,6 +21,7 @@ export const taskMocks = [
       description: "Позвонить другу и поздравить с днем рождения",
       urgency: "urgent",
       importance: "not-important",
+      completed: false
     },
     {
       id: 4,
@@ -26,6 +29,7 @@ export const taskMocks = [
       description: "Прочитать несколько глав новой книги",
       urgency: "not-urgent",
       importance: "not-important",
+      completed: false
     },
     {
       id: 5,
@@ -33,5 +37,6 @@ export const taskMocks = [
       description: "Подготовить слайды и речь для презентации на следующей неделе",
       urgency: "urgent",
       importance: "important",
+      completed: false
     },
   ];
