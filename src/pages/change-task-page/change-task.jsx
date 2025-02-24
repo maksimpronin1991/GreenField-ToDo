@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export function ChangeTaskPage() {
@@ -14,10 +14,7 @@ export function ChangeTaskPage() {
             setFormData({...formData, [name]: value});
         }
     
-        useEffect(() => {
-            console.log("Updated formData:", formData);
-        }, [formData]);
-    
+
         const getTaskColor = (urgency, importance) => {
             if (urgency === "urgent" && importance === "important") return "#ffcccc";
             if (urgency === "not-urgent" && importance === "important") return "#ccffcc";

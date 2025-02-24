@@ -1,12 +1,16 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 
-export function Task() {
+// eslint-disable-next-line no-unused-vars
+export function Task( { title, description}) {
+
+
 
     return (
         <li className="tasks-list-item">
             <div className="list-item-container">
                 <div className="list-item-top">
-                    <h3 className="list-item-title">Task1</h3>
+                    <h3 className="list-item-title">{title}</h3>
                     <div className="list-item-controllers">
                         <label htmlFor="complete-checkbox">
                             Done
@@ -21,7 +25,7 @@ export function Task() {
                         <button className="delete-btn">Delete</button>
                     </div>
                 </div>
-                <p className="list-item-description">Wash my feet</p>
+                <p className="list-item-description">{description}</p>
             </div>
         </li>
     )

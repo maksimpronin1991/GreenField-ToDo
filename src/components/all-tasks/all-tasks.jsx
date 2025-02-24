@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import { Task } from "../task/task";
 
-export function AllTasks() {
+// eslint-disable-next-line react/prop-types
+export function AllTasks({tasks}) {
+    const allTasks = tasks
+
     return (
         <div className="all-tasks">
             <h2 className="all-tasks-title">All Tasks</h2>
@@ -20,12 +23,17 @@ export function AllTasks() {
                 </div>
             </div>
             <ul id="all-tasks-list">
-                <Task/>
-                <Task/>
-                <Task/>
-                <Task/>
-                <Task/>
-                <Task/>
+            {allTasks.map((task) => (
+                    <Task
+                        key={task.id} // Уникальный ключ для React
+                        id={task.id}
+                        title={task.title}
+                        description={task.description}
+                        urgency={task.urgency}
+                        importance={task.importance}
+                        completed={task.completed}
+                    />
+                ))}
             </ul>
         </div>
     )

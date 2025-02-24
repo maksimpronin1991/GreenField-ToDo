@@ -8,13 +8,16 @@ import { useState } from 'react'
 
 function App() {
 
-  const [tasks, setTasks] = useState([]);
+  const [task, setTasks] = useState([]);
 
   const handleAddTask = (newTask) => {
-    setTasks([...tasks, newTask]);
-    localStorage.setItem("tasks", JSON.stringify([...tasks, newTask]));
-    console.log(localStorage.getItem("tasks"));
+    setTasks([...task, newTask]);
+    localStorage.setItem("tasks", JSON.stringify([...task, newTask]));
+    
 };
+
+const tasks =  JSON.parse(localStorage.getItem("tasks"));
+
 
 
 
@@ -25,7 +28,7 @@ function App() {
         <Route path="/" element={<StartPage />} />
         <Route path="/add" element={<AddTaskPage onAddTask={handleAddTask}/>}/>
         <Route path="/change/:taskId" element={<ChangeTaskPage/>}/>
-        <Route path='/main/:filter' element={<MainPage />} />
+        <Route path='/main/:filter' element={<MainPage tasks={tasks} />} />
         <Route path='*' element={<ErrorPage/>} />
       </Routes>
 

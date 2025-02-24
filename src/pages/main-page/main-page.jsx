@@ -4,7 +4,10 @@ import { Matrix } from "../../components/matrix/matrix"
 
 
 
-export function MainPage() {
+// eslint-disable-next-line react/prop-types
+export function MainPage( {tasks} ) {
+    const allTasks = tasks
+
     const filter= useParams()
     console.log(filter)
 
@@ -12,7 +15,7 @@ export function MainPage() {
         <div>
             <h1 className="main-title">Eisenhower Matrix To-Do List</h1>
             <div className="container">
-                <AllTasks />
+                <AllTasks tasks={allTasks} />
                 <Matrix />
             </div>
         </div>
