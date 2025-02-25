@@ -16,7 +16,7 @@ export function MainPage( {tasks} ) {
             <h1 className="main-title">Eisenhower Matrix To-Do List</h1>
             <div className="container">
                 <AllTasks tasks={allTasks} />
-                <Matrix />
+                <Matrix tasks={allTasks}/>
             </div>
         </div>
     )

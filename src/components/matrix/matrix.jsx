@@ -1,40 +1,93 @@
 import { Task } from "../task/task";
 
-export function Matrix(){
-    return (<div className="matrix">
-        <div className="quadrant urgent-important">
-          <h2>Urgent &amp; Important (make it now)</h2>
-          <ul id="urgent-important-list">
-            <Task/>
-          </ul>
-        </div>
-        <div className="quadrant not-urgent-important">
-          <h2>Not Urgent &amp; Important (plane it)</h2>
-          <ul id="not-urgent-important-list">
-          <Task/>
+// eslint-disable-next-line react/prop-types
+export function Matrix({ tasks }) {
+  const allTasks = tasks
 
-          </ul>
-        </div>
-        <div className="quadrant urgent-not-important">
-          <h2>Urgent &amp; Not Important (delegate it)</h2>
-          <ul id="urgent-not-important-list">
-          <Task/>
-          <Task/>
-          <Task/>
-          <Task/>
-          <Task/>
-          <Task/>
-          <Task/>
-          </ul>
-        </div>
-        <div className="quadrant not-urgent-not-important">
-          <h2>Not Urgent &amp; Not Important (delete or put it aside)</h2>
-          <ul id="not-urgent-not-important-list">
-          <Task/>
 
-          </ul>
-        </div>
-      </div>
-      
-    )
+  const urgentImportantTask = allTasks.filter(
+    (task) => task.urgency === "urgent" && task.importance === "important"
+  )
+
+  const notUrgentImportantTasks = allTasks.filter(
+    (task) => task.urgency === "not-urgent" && task.importance === "important"
+  );
+
+  const urgentNotImportantTasks = allTasks.filter(
+    (task) => task.urgency === "urgent" && task.importance === "not-important"
+  );
+
+  const notUrgentNotImportantTasks = allTasks.filter(
+    (task) => task.urgency === "not-urgent" && task.importance === "not-important"
+  );
+
+
+  return (<div className="matrix">
+    <div className="quadrant urgent-important">
+      <h2>Urgent &amp; Important (make it now)</h2>
+      <ul id="urgent-important-list">
+        {urgentImportantTask.map((task) => (
+          <Task
+            key={task.id} // Уникальный ключ для React
+            id={task.id}
+            title={task.title}
+            description={task.description}
+            urgency={task.urgency}
+            importance={task.importance}
+            completed={task.completed}
+          />
+        ))}
+      </ul>
+    </div>
+    <div className="quadrant not-urgent-important">
+      <h2>Not Urgent &amp; Important (plane it)</h2>
+      <ul id="not-urgent-important-list">
+        {notUrgentImportantTasks.map((task) => (
+          <Task
+            key={task.id} // Уникальный ключ для React
+            id={task.id}
+            title={task.title}
+            description={task.description}
+            urgency={task.urgency}
+            importance={task.importance}
+            completed={task.completed}
+          />
+        ))}
+      </ul>
+    </div>
+    <div className="quadrant urgent-not-important">
+      <h2>Urgent &amp; Not Important (delegate it)</h2>
+      <ul id="urgent-not-important-list">
+        {urgentNotImportantTasks.map((task) => (
+          <Task
+            key={task.id} // Уникальный ключ для React
+            id={task.id}
+            title={task.title}
+            description={task.description}
+            urgency={task.urgency}
+            importance={task.importance}
+            completed={task.completed}
+          />
+        ))}
+      </ul>
+    </div>
+    <div className="quadrant not-urgent-not-important">
+      <h2>Not Urgent &amp; Not Important (delete or put it aside)</h2>
+      <ul id="not-urgent-not-important-list">
+        {notUrgentNotImportantTasks.map((task) => (
+          <Task
+            key={task.id} // Уникальный ключ для React
+            id={task.id}
+            title={task.title}
+            description={task.description}
+            urgency={task.urgency}
+            importance={task.importance}
+            completed={task.completed}
+          />
+        ))}
+      </ul>
+    </div>
+  </div>
+
+  )
 }
