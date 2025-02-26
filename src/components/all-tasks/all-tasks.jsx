@@ -14,8 +14,8 @@ export function AllTasks({tasks, onDelete}) {
                     <button className="filter-btn active" data-filter="all">
                         All
                     </button>
-                    <button className="filter-btn" data-filter="active">
-                        Active
+                    <button className="filter-btn" data-filter="just-do-it">
+                        Just do it
                     </button>
                     <button className="filter-btn" data-filter="completed">
                         Completed
