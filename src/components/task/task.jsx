@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 
 
-export function Task( { title, description, urgency, importance}) {
+export function Task( {id, title, description, urgency, importance,onDelete}) {
 
     const getTaskColor = (urgency, importance) => {
         if (urgency === "urgent" && importance === "important") return "#ffcccc";
@@ -12,10 +12,14 @@ export function Task( { title, description, urgency, importance}) {
         return "#ffffff"; 
     }
 
+    const handleDelete = () => {
+        
+        onDelete(id);
+    }
 
     return (
         <li className="tasks-list-item"style={{
-            backgroundColor: getTaskColor(urgency, importance),
+            backgroundColor: getTaskColor(urgency, importance)
 
         }}>
             <div className="list-item-container">
@@ -32,7 +36,7 @@ export function Task( { title, description, urgency, importance}) {
                             />
                         </label>
                         <Link to="/change/:taskId" className="edit-btn">Edit</Link>
-                        <button className="delete-btn">Delete</button>
+                        <button className="delete-btn" onClick={handleDelete}>Delete</button>
                     </div>
                 </div>
                 <p className="list-item-description">{description}</p>

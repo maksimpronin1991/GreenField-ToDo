@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Task } from "../task/task";
 
 // eslint-disable-next-line react/prop-types
-export function AllTasks({tasks}) {
+export function AllTasks({tasks, onDelete}) {
     const allTasks = tasks
 
     return (
@@ -32,6 +32,7 @@ export function AllTasks({tasks}) {
                         urgency={task.urgency}
                         importance={task.importance}
                         completed={task.completed}
+                        onDelete={onDelete}
                     />
                 ))}
             </ul>

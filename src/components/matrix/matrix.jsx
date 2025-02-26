@@ -1,7 +1,7 @@
 import { Task } from "../task/task";
 
 // eslint-disable-next-line react/prop-types
-export function Matrix({ tasks }) {
+export function Matrix({ tasks, onDelete }) {
   const allTasks = tasks
 
 
@@ -35,6 +35,7 @@ export function Matrix({ tasks }) {
             urgency={task.urgency}
             importance={task.importance}
             completed={task.completed}
+            onDelete={onDelete}
           />
         ))}
       </ul>
@@ -51,6 +52,7 @@ export function Matrix({ tasks }) {
             urgency={task.urgency}
             importance={task.importance}
             completed={task.completed}
+            onDelete={onDelete}
           />
         ))}
       </ul>
@@ -67,6 +69,7 @@ export function Matrix({ tasks }) {
             urgency={task.urgency}
             importance={task.importance}
             completed={task.completed}
+            onDelete={onDelete}
           />
         ))}
       </ul>
@@ -83,6 +86,7 @@ export function Matrix({ tasks }) {
             urgency={task.urgency}
             importance={task.importance}
             completed={task.completed}
+            onDelete={onDelete}
           />
         ))}
       </ul>
