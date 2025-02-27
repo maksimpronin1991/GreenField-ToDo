@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import { Link } from "react-router-dom";
 
 
 export function Task( {id, title, description, urgency, importance,onDelete}) {
@@ -12,9 +11,12 @@ export function Task( {id, title, description, urgency, importance,onDelete}) {
         return "#ffffff"; 
     }
 
-    const handleDelete = () => {
-        
+    const handleDelete = () => { 
         onDelete(id);
+    }
+
+    const handleChange = () => {
+        onchange(id)
     }
 
     return (
@@ -35,7 +37,7 @@ export function Task( {id, title, description, urgency, importance,onDelete}) {
                                 name="complete-checkbox"
                             />
                         </label>
-                        <Link to="/change/:taskId" className="edit-btn">Edit</Link>
+                        <button className="edit-btn" onClick={handleChange}>Edit</button>
                         <button className="delete-btn" onClick={handleDelete}>Delete</button>
                     </div>
                 </div>
