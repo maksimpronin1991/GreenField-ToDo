@@ -5,8 +5,9 @@ import { Matrix } from "../../components/matrix/matrix"
 
 
 // eslint-disable-next-line react/prop-types
-export function MainPage( {tasks,onDelete} ) {
+export function MainPage( {tasks,onDelete,onHandleChangeStatus} ) {
     const allTasks = tasks
+
 
     const filter= useParams()
     console.log(filter)
@@ -15,8 +16,8 @@ export function MainPage( {tasks,onDelete} ) {
         <div>
             <h1 className="main-title">Eisenhower Matrix To-Do List</h1>
             <div className="container">
-                <AllTasks tasks={allTasks} onDelete={onDelete} />
-                <Matrix tasks={allTasks} onDelete={onDelete} />
+                <AllTasks tasks={allTasks} onDelete={onDelete} onHandleChangeStatus={onHandleChangeStatus} />
+                <Matrix tasks={allTasks} onDelete={onDelete} onHandleChangeStatus={onHandleChangeStatus} />
             </div>
         </div>
     )

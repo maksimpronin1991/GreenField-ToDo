@@ -1,23 +1,24 @@
 import { Task } from "../task/task";
 
 // eslint-disable-next-line react/prop-types
-export function Matrix({ tasks, onDelete }) {
-  const allTasks = tasks
+export function Matrix({ tasks, onDelete, onHandleChangeStatus }) {
+    // eslint-disable-next-line react/prop-types
+ const actualTasks = tasks.filter((task) => !task.completed);
 
 
-  const urgentImportantTask = allTasks.filter(
+  const urgentImportantTask = actualTasks.filter(
     (task) => task.urgency === "urgent" && task.importance === "important"
   )
 
-  const notUrgentImportantTasks = allTasks.filter(
+  const notUrgentImportantTasks = actualTasks.filter(
     (task) => task.urgency === "not-urgent" && task.importance === "important"
   );
 
-  const urgentNotImportantTasks = allTasks.filter(
+  const urgentNotImportantTasks = actualTasks.filter(
     (task) => task.urgency === "urgent" && task.importance === "not-important"
   );
 
-  const notUrgentNotImportantTasks = allTasks.filter(
+  const notUrgentNotImportantTasks = actualTasks.filter(
     (task) => task.urgency === "not-urgent" && task.importance === "not-important"
   );
 
@@ -28,7 +29,7 @@ export function Matrix({ tasks, onDelete }) {
       <ul id="urgent-important-list">
         {urgentImportantTask.map((task) => (
           <Task
-            key={task.id} // Уникальный ключ для React
+            key={task.id}
             id={task.id}
             title={task.title}
             description={task.description}
@@ -36,6 +37,7 @@ export function Matrix({ tasks, onDelete }) {
             importance={task.importance}
             completed={task.completed}
             onDelete={onDelete}
+            onHandleChangeStatus={onHandleChangeStatus}
           />
         ))}
       </ul>
@@ -45,7 +47,7 @@ export function Matrix({ tasks, onDelete }) {
       <ul id="not-urgent-important-list">
         {notUrgentImportantTasks.map((task) => (
           <Task
-            key={task.id} // Уникальный ключ для React
+            key={task.id}
             id={task.id}
             title={task.title}
             description={task.description}
@@ -53,6 +55,7 @@ export function Matrix({ tasks, onDelete }) {
             importance={task.importance}
             completed={task.completed}
             onDelete={onDelete}
+            onHandleChangeStatus={onHandleChangeStatus}
           />
         ))}
       </ul>
@@ -62,7 +65,7 @@ export function Matrix({ tasks, onDelete }) {
       <ul id="urgent-not-important-list">
         {urgentNotImportantTasks.map((task) => (
           <Task
-            key={task.id} // Уникальный ключ для React
+            key={task.id} 
             id={task.id}
             title={task.title}
             description={task.description}
@@ -70,6 +73,7 @@ export function Matrix({ tasks, onDelete }) {
             importance={task.importance}
             completed={task.completed}
             onDelete={onDelete}
+            onHandleChangeStatus={onHandleChangeStatus}
           />
         ))}
       </ul>
@@ -79,7 +83,7 @@ export function Matrix({ tasks, onDelete }) {
       <ul id="not-urgent-not-important-list">
         {notUrgentNotImportantTasks.map((task) => (
           <Task
-            key={task.id} // Уникальный ключ для React
+            key={task.id} 
             id={task.id}
             title={task.title}
             description={task.description}
@@ -87,11 +91,11 @@ export function Matrix({ tasks, onDelete }) {
             importance={task.importance}
             completed={task.completed}
             onDelete={onDelete}
+            onHandleChangeStatus={onHandleChangeStatus}
           />
         ))}
       </ul>
     </div>
   </div>
-
   )
 }

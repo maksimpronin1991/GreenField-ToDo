@@ -3,7 +3,7 @@
 import { Link } from "react-router-dom";
 
 
-export function Task( {id, title, description, urgency, importance,onDelete}) {
+export function Task( {id, title, description, urgency, importance,completed ,onDelete,onHandleChangeStatus}) {
 
     const getTaskColor = (urgency, importance) => {
         if (urgency === "urgent" && importance === "important") return "#ffcccc";
@@ -13,11 +13,15 @@ export function Task( {id, title, description, urgency, importance,onDelete}) {
         return "#ffffff"; 
     }
 
+
     const handleDelete = () => { 
         onDelete(id);
     }
 
-    
+    const handleCheckboxChange = () => {
+        onHandleChangeStatus(id)
+    }
+
 
     return (
         <li className="tasks-list-item"style={{
@@ -35,6 +39,8 @@ export function Task( {id, title, description, urgency, importance,onDelete}) {
                                 className="complete-checkbox"
                                 id="complete-checkbox"
                                 name="complete-checkbox"
+                                checked={completed}
+                                onChange={handleCheckboxChange}
                             />
                         </label>
                         <Link to={`/change/${id}`} className="edit-btn" >Edit</Link>

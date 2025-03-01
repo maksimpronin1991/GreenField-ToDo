@@ -8,7 +8,10 @@ import { useState } from 'react'
 
 function App() {
 
-  const [task, setTasks] = useState([]);
+  const [task, setTasks] = useState([
+
+  ]);
+
 
   const handleAddTask = (newTask) => {
     setTasks([...task, newTask]);
@@ -21,8 +24,6 @@ function App() {
     localStorage.setItem("tasks", JSON.stringify(updatedTasks)); // Обновляем localStorage
   };
 
-  const tasks = JSON.parse(localStorage.getItem("tasks"));
-
   const handleChangeTask = (changedTask) => {
     const updatedTasks = tasks.map((task) =>
       task.id === changedTask.id ? changedTask : task
@@ -31,6 +32,16 @@ function App() {
   localStorage.setItem("tasks", JSON.stringify(updatedTasks));
 };
 
+const handleChangeStatus = (taskId) => {
+  const updatedTasks = tasks.map((task) =>
+    task.id === taskId ? { ...task, completed: !task.completed } : task
+  );
+  setTasks(updatedTasks);
+  localStorage.setItem("tasks", JSON.stringify(updatedTasks));
+};
+
+const tasks = JSON.parse(localStorage.getItem("tasks"));
+
   return (
     <BrowserRouter>
 
@@ -38,7 +49,7 @@ function App() {
         <Route path="/" element={<StartPage />} />
         <Route path="/add" element={<AddTaskPage onAddTask={handleAddTask} />} />
         <Route path="/change/:taskId" element={<ChangeTaskPage tasks={tasks} onChange={handleChangeTask} />} />
-        <Route path='/main/:filter' element={<MainPage tasks={tasks} onDelete={handleDeleteTask} />} />
+        <Route path='/main/:filter' element={<MainPage tasks={tasks} onDelete={handleDeleteTask} onHandleChangeStatus={handleChangeStatus} />} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>
 
