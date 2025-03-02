@@ -1,31 +1,59 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Task } from "../task/task";
 
 // eslint-disable-next-line react/prop-types
-export function AllTasks({tasks, onDelete, onHandleChangeStatus}) {
-    const allTasks = tasks
+export function AllTasks({ tasks, onDelete, onHandleChangeStatus }) {
+    const [filter, setFilter] = useState("all"); 
+
+    // eslint-disable-next-line react/prop-types
+    const filteredTasks = tasks.filter((task) => {
+        if (filter === "just-do-it") {
+            return  task.urgency === "urgent" && task.importance === "important";
+        } else if (filter === "completed") {
+            return task.completed;
+        } else {
+            return true;
+        }
+    });
+
+    const handleFilterClick = (filterType) => {
+        setFilter(filterType);
+    };
 
     return (
         <div className="all-tasks">
             <h2 className="all-tasks-title">All Tasks</h2>
             <div className="all-tasks_controls">
-                <Link  to="/add"  className="add-task-btn">Add</Link>
+                <Link to="/add" className="add-task-btn">Add</Link>
                 <div className="filter-controls">
-                    <button className="filter-btn active" data-filter="all">
+                    <button
+                        className={`filter-btn ${filter === "all" ? "active" : ""}`}
+                        onClick={() => handleFilterClick("all")}
+                        data-filter="all"
+                    >
                         All
                     </button>
-                    <button className="filter-btn" data-filter="just-do-it">
+                    <button
+                        className={`filter-btn ${filter === "just-do-it" ? "active" : ""}`}
+                        onClick={() => handleFilterClick("just-do-it")}
+                        data-filter="just-do-it"
+                    >
                         Just do it
                     </button>
-                    <button className="filter-btn" data-filter="completed">
+                    <button
+                        className={`filter-btn ${filter === "completed" ? "active" : ""}`}
+                        onClick={() => handleFilterClick("completed")}
+                        data-filter="completed"
+                    >
                         Completed
                     </button>
                 </div>
             </div>
             <ul id="all-tasks-list">
-            {allTasks.map((task) => (
+                {filteredTasks.map((task) => (
                     <Task
-                        key={task.id} // Уникальный ключ для React
+                        key={task.id}
                         id={task.id}
                         title={task.title}
                         description={task.description}
@@ -38,5 +66,5 @@ export function AllTasks({tasks, onDelete, onHandleChangeStatus}) {
                 ))}
             </ul>
         </div>
-    )
+    );
 }
