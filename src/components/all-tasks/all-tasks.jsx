@@ -23,7 +23,7 @@ export function AllTasks({ tasks, onDelete, onHandleChangeStatus }) {
 
     return (
         <div className="all-tasks">
-            <h2 className="all-tasks-title">All Tasks</h2>
+            <h2 className="all-tasks-title">Tasks</h2>
             <div className="all-tasks_controls">
                 <Link to="/add" className="add-task-btn">Add</Link>
                 <div className="filter-controls">
