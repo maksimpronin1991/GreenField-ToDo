@@ -27,27 +27,27 @@ export function AllTasks({ tasks, onDelete, onHandleChangeStatus }) {
             <div className="all-tasks_controls">
                 <Link to="/add" className="add-task-btn">Add</Link>
                 <div className="filter-controls">
-                    <button
+                    <a
                         className={`filter-btn ${filter === "all" ? "active" : ""}`}
                         onClick={() => handleFilterClick("all")}
                         data-filter="all"
                     >
                         All
-                    </button>
-                    <button
+                    </a>
+                    <a
                         className={`filter-btn ${filter === "just-do-it" ? "active" : ""}`}
                         onClick={() => handleFilterClick("just-do-it")}
                         data-filter="just-do-it"
                     >
                         Just do it
-                    </button>
-                    <button
+                    </a>
+                    <a
                         className={`filter-btn ${filter === "completed" ? "active" : ""}`}
                         onClick={() => handleFilterClick("completed")}
                         data-filter="completed"
                     >
                         Completed
-                    </button>
+                    </a>
                 </div>
             </div>
             <ul id="all-tasks-list">
