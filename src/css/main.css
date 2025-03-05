@@ -355,7 +355,7 @@ li {
   display: none;
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 920px) {
   .container {
     grid-template-columns: 1fr;
   }
