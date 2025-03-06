@@ -6,16 +6,17 @@ import { Task } from "../task/task";
 export function AllTasks({ tasks, onDelete, onHandleChangeStatus }) {
     const [filter, setFilter] = useState("all"); 
 
+
     // eslint-disable-next-line react/prop-types
-    const filteredTasks = tasks.filter((task) => {
+    const filteredTasks = tasks ? tasks.filter((task) => {
         if (filter === "just-do-it") {
-            return  task.urgency === "urgent" && task.importance === "important";
+            return task.urgency === "urgent" && task.importance === "important";
         } else if (filter === "completed") {
             return task.completed;
         } else {
             return true;
         }
-    });
+    }) : [];
 
     const handleFilterClick = (filterType) => {
         setFilter(filterType);

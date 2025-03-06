@@ -2,8 +2,8 @@ import { Task } from "../task/task";
 
 // eslint-disable-next-line react/prop-types
 export function Matrix({ tasks, onDelete, onHandleChangeStatus }) {
-    // eslint-disable-next-line react/prop-types
- const actualTasks = tasks.filter((task) => !task.completed);
+  // eslint-disable-next-line react/prop-types
+  const actualTasks = tasks ? tasks.filter((task) => !task.completed) : [];
 
 
   const urgentImportantTask = actualTasks.filter(
@@ -65,7 +65,7 @@ export function Matrix({ tasks, onDelete, onHandleChangeStatus }) {
       <ul id="urgent-not-important-list">
         {urgentNotImportantTasks.map((task) => (
           <Task
-            key={task.id} 
+            key={task.id}
             id={task.id}
             title={task.title}
             description={task.description}
@@ -83,7 +83,7 @@ export function Matrix({ tasks, onDelete, onHandleChangeStatus }) {
       <ul id="not-urgent-not-important-list">
         {notUrgentNotImportantTasks.map((task) => (
           <Task
-            key={task.id} 
+            key={task.id}
             id={task.id}
             title={task.title}
             description={task.description}
