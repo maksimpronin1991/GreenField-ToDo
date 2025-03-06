@@ -36,7 +36,7 @@ export function AddTaskPage({ onAddTask }) {
         };
 
         onAddTask(newTask); // Передаем задачу в родительский компонент
-        navigate("/main/all"); // Перенаправляем на главную страницу
+        navigate("/main"); // Перенаправляем на главную страницу
     };
 
     const getTaskColor = (urgency, importance) => {
@@ -50,7 +50,7 @@ export function AddTaskPage({ onAddTask }) {
     return (
         <div id="taskModal" className="modal">
             <div className="modal-content">
-            <Link to="/main/all" className="close">×</Link>
+            <Link to="/main" className="close">×</Link>
                 <h2 id="modalTitle">Add Task</h2>
                 <form id="taskForm" onSubmit={handleSaveTask}>
                     <label htmlFor="taskTitle">Title:</label>

@@ -1,4 +1,3 @@
-import { useParams } from "react-router-dom"
 import { AllTasks } from "../../components/all-tasks/all-tasks"
 import { Matrix } from "../../components/matrix/matrix"
 
@@ -8,9 +7,6 @@ import { Matrix } from "../../components/matrix/matrix"
 export function MainPage({ tasks, onDelete, onHandleChangeStatus }) {
     const allTasks = tasks
 
-
-    const filter = useParams()
-    console.log(filter)
 
     return (
         <div className="main-page">

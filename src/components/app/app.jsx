@@ -21,7 +21,7 @@ function App() {
   const handleDeleteTask = (taskId) => {
     const updatedTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(updatedTasks);
-    localStorage.setItem("tasks", JSON.stringify(updatedTasks)); // Обновляем localStorage
+    localStorage.setItem("tasks", JSON.stringify(updatedTasks)); 
   };
 
   const handleChangeTask = (changedTask) => {
@@ -49,7 +49,7 @@ const tasks = JSON.parse(localStorage.getItem("tasks"));
         <Route path="/" element={<StartPage />} />
         <Route path="/add" element={<AddTaskPage onAddTask={handleAddTask} />} />
         <Route path="/change/:taskId" element={<ChangeTaskPage tasks={tasks} onChange={handleChangeTask} />} />
-        <Route path='/main/:filter' element={<MainPage tasks={tasks} onDelete={handleDeleteTask} onHandleChangeStatus={handleChangeStatus} />} />
+        <Route path='/main' element={<MainPage tasks={tasks} onDelete={handleDeleteTask} onHandleChangeStatus={handleChangeStatus} />} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>
 

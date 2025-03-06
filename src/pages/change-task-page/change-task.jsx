@@ -49,7 +49,7 @@ export function ChangeTaskPage({ tasks, onChange }) {
         };
 
         onChange(changedTask); 
-        navigate("/main/all"); 
+        navigate("/main"); 
     };
 
     const getTaskColor = (urgency, importance) => {
@@ -67,7 +67,7 @@ export function ChangeTaskPage({ tasks, onChange }) {
     return (
         <div id="taskModal" className="modal">
             <div className="modal-content">
-                <Link to="/main/all" className="close">×</Link>
+                <Link to="/main" className="close">×</Link>
                 <h2 id="modalTitle">Edit Task</h2>
                 <form id="taskForm" onSubmit={handleSaveTask}>
                     <label htmlFor="taskTitle">Title:</label>
