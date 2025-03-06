@@ -387,7 +387,7 @@ li {
   .urgent-important,.not-urgent-important,.urgent-not-important,.not-urgent-not-important{
     max-height: 88vh;
     min-height:90vh;
-    padding: 10px;
+    padding: 20px 10px;
   }
 
   .all-tasks{
