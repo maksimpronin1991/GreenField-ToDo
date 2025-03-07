@@ -366,7 +366,7 @@ li {
   .matrix-nav{
     position: sticky;
     top:0px;
-    padding: 14px;
+    padding: 12px;
     border: 1px solid #ccc;
     z-index: 100; 
     width: 100%;
@@ -385,7 +385,7 @@ li {
 
 
   .urgent-important,.not-urgent-important,.urgent-not-important,.not-urgent-not-important{
-    max-height: 88vh;
+    max-height: 90vh;
     min-height:90vh;
     padding: 20px 10px;
   }
@@ -401,8 +401,14 @@ li {
     grid-template-rows: repeat(4, 1fr);
     padding: 20px 10px;
     overflow-y: hidden;
-    margin-top: 8vh;
+    margin-top:7vh;
   }
+
+.all-tasks,
+.matrix {
+  height: calc(100vh - 9vh); 
+
+}
 
   .matrix-nav-btn{
     border-left: #6f6d6d 1px solid;
@@ -459,8 +465,6 @@ li {
     justify-content: center;
     gap: 20px;
   }
-
-
 
   .filter-btn {
     margin: 5px 5px;
